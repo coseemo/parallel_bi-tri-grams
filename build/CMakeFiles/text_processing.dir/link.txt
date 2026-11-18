@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtext_processing.a CMakeFiles/text_processing.dir/src/tokenizer.cpp.o CMakeFiles/text_processing.dir/src/ngram_counter.cpp.o
+/usr/bin/ranlib libtext_processing.a

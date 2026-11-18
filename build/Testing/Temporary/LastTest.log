@@ -1,0 +1,35 @@
+Start testing: Nov 18 15:53 CET
+----------------------------------------------------------
+1/2 Testing: tokenizer_tests
+1/2 Test: tokenizer_tests
+Command: "/home/cosimo/progetti/parallel/build/test_tokenizer"
+Directory: /home/cosimo/progetti/parallel/build
+"tokenizer_tests" start time: Nov 18 15:53 CET
+Output:
+----------------------------------------------------------
+Tutti i test del tokenizer sono superati.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"tokenizer_tests" end time: Nov 18 15:53 CET
+"tokenizer_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: ngram_counter_tests
+2/2 Test: ngram_counter_tests
+Command: "/home/cosimo/progetti/parallel/build/test_ngram_counter"
+Directory: /home/cosimo/progetti/parallel/build
+"ngram_counter_tests" start time: Nov 18 15:53 CET
+Output:
+----------------------------------------------------------
+tutti i test del contatore sono stati superati
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ngram_counter_tests" end time: Nov 18 15:53 CET
+"ngram_counter_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 18 15:53 CET

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/cosimo/progetti/parallel/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -37,6 +37,7 @@ find_package(ICU REQUIRED COMPONENTS uc)
 #il codice più ordinato
 add_library(text_processing
     src/tokenizer.cpp
+    src/ngram_counter.cpp
 )
 
 #questo ci dice al progetto
@@ -84,3 +85,18 @@ add_test(
     COMMAND test_tokenizer
 )
 
+#creiamo l'eseguibile per testare il contatore
+add_executable(test_ngram_counter
+    tests/test_ngram_counter.cpp
+)
+
+#colleghiamo il test alla libreria che contiene tokenizer e contatore
+target_link_libraries(test_ngram_counter
+    PRIVATE text_processing
+)
+
+#registriamo il test nel sistema CTest
+add_test(
+    NAME ngram_counter_tests
+    COMMAND test_ngram_counter
+)

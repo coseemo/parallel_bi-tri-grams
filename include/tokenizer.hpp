@@ -8,7 +8,7 @@
 //
 //include std::size_t che serve per rappresentare
 //dimensioni e posizioni
-#include <cstdef>
+#include <cstddef>
 //gestion delle stringhe
 #include <string>
 //accesso alle stringhe senza copiarle
@@ -33,7 +33,7 @@ namespace ngram{
 //
 struct Span{
     std::size_t offset;
-    std::size_t lenght;
+    std::size_t length;
 };
 
 //funzione che riceve una stringa di caratteri
@@ -47,7 +47,7 @@ struct Span{
 //-spazi multipli sono collassati
 //-rimozione spazi iniziali e finali
 [[nodiscard]]
-std::string normalize_utf8(std::string_view input)
+std::string normalize_utf8(std::string_view input);
 
 //trova tutte le parole in un testo normalizzato
 //e ritorna un vettore di span, ciascuno
@@ -55,7 +55,7 @@ std::string normalize_utf8(std::string_view input)
 //in byte di una parola
 //
 [[nodiscard]]
-std::vector<Span> find_word_spans(std::string_view normalized)
+std::vector<Span> find_word_spans(std::string_view normalized);
 
 //individua i singoli code point unicode presenti nel testo
 //e restituisce un vettore, uno per ciascun code point.
@@ -77,6 +77,6 @@ std::vector<Span> find_codepoint_spans(std::string_view utf8);
 std::string_view span_view(
         std::string_view text,
         Span span
-        )
+        );
 
 }
