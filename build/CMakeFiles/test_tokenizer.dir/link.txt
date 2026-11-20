@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/test_tokenizer.dir/tests/test_tokenizer.cpp.o -o test_tokenizer  libtext_processing.a /usr/lib/libicuuc.so -ldl
+/usr/bin/c++ CMakeFiles/test_tokenizer.dir/tests/test_tokenizer.cpp.o -o test_tokenizer  libtext_processing.a /usr/lib/libicuuc.so -ldl /usr/lib/libicui18n.so

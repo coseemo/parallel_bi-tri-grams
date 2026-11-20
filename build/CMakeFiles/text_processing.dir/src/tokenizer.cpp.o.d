@@ -158,4 +158,10 @@ CMakeFiles/text_processing.dir/src/tokenizer.cpp.o: \
  /usr/include/c++/16/bits/atomic_lockfree_defines.h \
  /usr/include/c++/16/backward/auto_ptr.h \
  /usr/include/c++/16/pstl/glue_memory_defs.h \
- /usr/include/c++/16/pstl/execution_defs.h /usr/include/unicode/unorm2.h
+ /usr/include/c++/16/pstl/execution_defs.h /usr/include/unicode/unorm2.h \
+ /usr/include/unicode/brkiter.h /usr/include/unicode/chariter.h \
+ /usr/include/unicode/locid.h /usr/include/unicode/strenum.h \
+ /usr/include/unicode/putil.h /usr/include/unicode/uloc.h \
+ /usr/include/unicode/uenum.h /usr/include/unicode/ubrk.h \
+ /usr/include/unicode/utext.h /usr/include/unicode/parseerr.h \
+ /usr/include/unicode/umisc.h

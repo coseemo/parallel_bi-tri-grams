@@ -368,20 +368,30 @@ CMakeFiles/text_processing.dir/src/tokenizer.cpp.o
  /usr/include/sys/single_threaded.h
  /usr/include/sys/types.h
  /usr/include/time.h
+ /usr/include/unicode/brkiter.h
  /usr/include/unicode/bytestream.h
  /usr/include/unicode/char16ptr.h
+ /usr/include/unicode/chariter.h
  /usr/include/unicode/localpointer.h
+ /usr/include/unicode/locid.h
  /usr/include/unicode/normalizer2.h
+ /usr/include/unicode/parseerr.h
  /usr/include/unicode/platform.h
  /usr/include/unicode/ptypes.h
+ /usr/include/unicode/putil.h
  /usr/include/unicode/rep.h
  /usr/include/unicode/std_string.h
+ /usr/include/unicode/strenum.h
  /usr/include/unicode/stringoptions.h
  /usr/include/unicode/stringpiece.h
+ /usr/include/unicode/ubrk.h
  /usr/include/unicode/uchar.h
  /usr/include/unicode/uconfig.h
  /usr/include/unicode/ucpmap.h
+ /usr/include/unicode/uenum.h
+ /usr/include/unicode/uloc.h
  /usr/include/unicode/umachine.h
+ /usr/include/unicode/umisc.h
  /usr/include/unicode/unifilt.h
  /usr/include/unicode/unifunct.h
  /usr/include/unicode/unimatch.h
@@ -391,6 +401,7 @@ CMakeFiles/text_processing.dir/src/tokenizer.cpp.o
  /usr/include/unicode/uobject.h
  /usr/include/unicode/urename.h
  /usr/include/unicode/uset.h
+ /usr/include/unicode/utext.h
  /usr/include/unicode/utf.h
  /usr/include/unicode/utf16.h
  /usr/include/unicode/utf8.h

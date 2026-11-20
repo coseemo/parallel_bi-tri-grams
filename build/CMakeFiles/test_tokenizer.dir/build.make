@@ -97,6 +97,7 @@ test_tokenizer: CMakeFiles/test_tokenizer.dir/tests/test_tokenizer.cpp.o
 test_tokenizer: CMakeFiles/test_tokenizer.dir/build.make
 test_tokenizer: libtext_processing.a
 test_tokenizer: /usr/lib/libicuuc.so
+test_tokenizer: /usr/lib/libicui18n.so
 test_tokenizer: CMakeFiles/test_tokenizer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_tokenizer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_tokenizer.dir/link.txt --verbose=$(VERBOSE)

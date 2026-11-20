@@ -37,7 +37,21 @@ bool check_size(
     return true;
 }
 
+//verifica che un n-gramma non sia presente nella tabella
+bool check_absent(
+    const ngram::FrequencyTable& table,
+    const std::string& key
+) {
+    if (table.find(key) != table.end()) {
+        std::cerr << "test fallito: n-gramma presente ma non atteso ["
+                  << key << "]\n";
+        return false;
+    }
+
+    return true;
 }
+
+}//namespace
 
 //esegue i test del contatore
 int main() {
@@ -116,6 +130,41 @@ int main() {
         success &= check_size(counts.word_trigrams, 0);
         success &= check_size(counts.char_bigrams, 0);
         success &= check_size(counts.char_trigrams, 0);
+    }
+
+    //test dei confini tra frasi all'interno di un documento
+    {
+   	 const std::string document =
+        	"sole blu. Domani piove.";
+
+    	ngram::NgramCounts counts;
+
+    	//contiamo separatamente tutte le frasi del documento
+    	ngram::count_document(document, counts);
+
+    	//verifichiamo i bigrammi di parole interni alle frasi
+    	success &= check_frequency(
+        	counts.word_bigrams, "sole blu", 1
+    	);
+
+    	success &= check_frequency(
+        	counts.word_bigrams, "domani piove", 1
+    	);
+
+    	//verifichiamo che non venga creato un bigramma tra due frasi
+    	success &= check_absent(
+        	counts.word_bigrams, "blu domani"
+    	);
+
+    	//verifichiamo che non venga creato un trigramma tra due frasi
+    	success &= check_absent(
+        	counts.word_trigrams, "sole blu domani"
+    	);
+
+    	//verifichiamo che i caratteri delle due frasi rimangano separati
+    	success &= check_absent(
+        	counts.char_trigrams, "u d"
+    	);
     }
 
     if (!success) {

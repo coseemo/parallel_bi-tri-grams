@@ -28,7 +28,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 #altrimenti la configurazione fallisce.
 #uc sta per UNICODE Common,
 #è la componente di ICU che ci serve
-find_package(ICU REQUIRED COMPONENTS uc)
+find_package(ICU REQUIRED COMPONENTS uc i18n)
 
 #qui andiamo a creare una libreria c++
 #chiamata text_processing 
@@ -48,7 +48,7 @@ target_include_directories(text_processing
 
 #qui andiamo a collegare le diverse librerie
 target_link_libraries(text_processing
-    PUBLIC ICU::uc
+    PUBLIC ICU::uc ICU::i18n
 )
 
 #qui diciamo al compilatore di esser rigoroso:

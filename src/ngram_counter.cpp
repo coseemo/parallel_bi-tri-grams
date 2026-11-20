@@ -158,5 +158,38 @@ void count_sequence(
     }
 }
 
+
+//normalizza e conta separatamente tutte le frasi di un documento
+void count_document(
+    std::string_view document_text,
+    NgramCounts& counts
+) {
+
+    //se il documento è vuoto non abbiamo nulla da contare
+    if (document_text.empty()) {
+        return;
+    }
+
+    //dividiamo il documento in frasi utilizzando ICU
+    const std::vector<std::string> sentences =
+        split_sentences_utf8(document_text);
+
+    //scorriamo tutte le frasi individuate
+    for (const std::string& sentence : sentences) {
+
+        //normalizziamo la frase corrente
+        const std::string normalized_sentence =
+            normalize_utf8(sentence);
+
+        //controlliamo che la frase non sia vuota dopo la normalizzazione
+        if (!normalized_sentence.empty()) {
+
+            //contiamo gli n-grammi della frase normalizzata
+            count_sequence(normalized_sentence, counts);
+        }
+    }
+}
+
+
 } // namespace ngram
 

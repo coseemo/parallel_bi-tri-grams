@@ -95,6 +95,71 @@ void test_span_view_bounds() {
     require(threw, "span fuori dai limiti rifiutato");
 }
 
+
+void test_split_sentences_utf8() {
+
+    //test della suddivisione di un testo in più frasi
+    const std::string text =
+        "Il cielo è blu. Domani pioverà! Che bella giornata?";
+
+    const std::vector<std::string> sentences =
+        ngram::split_sentences_utf8(text);
+
+    //verifichiamo che siano state individuate tre frasi
+    require(sentences.size() == 3, "numero di frasi individuate");
+
+    //verifichiamo il contenuto delle frasi
+    require(
+        sentences[0] == "Il cielo è blu. ",
+        "contenuto della prima frase"
+    );
+
+    require(
+        sentences[1] == "Domani pioverà! ",
+        "contenuto della seconda frase"
+    );
+
+    require(
+        sentences[2] == "Che bella giornata?",
+        "contenuto della terza frase"
+    );
+
+    //test di un testo senza punteggiatura finale
+    const auto single_sentence =
+        ngram::split_sentences_utf8("Ciao mondo");
+
+    require(
+        single_sentence.size() == 1,
+        "testo senza punteggiatura"
+    );
+
+    //test di un testo vuoto
+    const auto empty_sentences =
+        ngram::split_sentences_utf8("");
+
+    require(
+        empty_sentences.empty(),
+        "gestione del testo vuoto"
+    );
+
+    //test di un input UTF-8 non valido
+    const std::string invalid_utf8("\xC3", 1);
+
+    bool threw = false;
+
+    try {
+        (void)ngram::split_sentences_utf8(invalid_utf8);
+    } catch (const std::invalid_argument&) {
+        threw = true;
+    }
+
+    require(
+        threw,
+        "rifiuto di sequenze UTF-8 non valide nella segmentazione"
+    );
+}
+
+
 }
 
 int main() {
@@ -104,6 +169,7 @@ int main() {
         test_find_codepoint_spans();
         test_invalid_utf8();
         test_span_view_bounds();
+	test_split_sentences_utf8();
     } catch (const std::exception& error) {
         std::cerr << "TEST FALLITO: " << error.what() << '\n';
         return 1;

@@ -28,5 +28,16 @@ void count_sequence(
     NgramCounts& counts
 );
 
+void count_sequence(
+    std::string_view normalized_text,
+    NgramCounts& counts
+);
+
+//normalizza e conta separatamente tutte le frasi di un documento
+void count_document(
+    std::string_view document_text,
+    NgramCounts& counts
+);
+
 }
 

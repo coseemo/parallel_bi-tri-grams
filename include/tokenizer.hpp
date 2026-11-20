@@ -49,6 +49,13 @@ struct Span{
 [[nodiscard]]
 std::string normalize_utf8(std::string_view input);
 
+//divide il testo originale in frasi
+// utilizzando le regole unicode di ICU
+//restituisce le frasi in UTF-8 
+//senza applicare la normalizzazione
+[[nodiscard]]
+std::vector<std::string> split_sentences_utf8(std::string_view input);
+
 //trova tutte le parole in un testo normalizzato
 //e ritorna un vettore di span, ciascuno
 //rappresentante la posizione e la lunghezza

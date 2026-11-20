@@ -17,6 +17,9 @@
 #include <unicode/unistr.h>
 #include <unicode/utf16.h>
 #include <unicode/utf8.h>
+#include <unicode/brkiter.h>
+#include <unicode/locid.h>
+#include <memory>
 
 //inseriamo le funzionzalità del tokenizer dentro al
 //namespace ngram
@@ -267,6 +270,86 @@ namespace ngram{
     std::string normalize_utf8(std::string_view input) {
         return normalize_utf8_impl(input);
     }
+
+    
+    std::vector<std::string> split_sentences_utf8(std::string_view input) {
+
+        //se il testo è vuoto restituiamo un vettore vuoto
+        if (input.empty()) {
+            return {};
+        }
+
+        //verifichiamo che il testo contenga sequenze UTF-8 valide
+        validate_utf8(input);
+
+        //variabile utilizzata da ICU per segnalare eventuali errori
+        UErrorCode status = U_ZERO_ERROR;
+
+        //creiamo un iteratore ICU per individuare i confini delle frasi
+        std::unique_ptr<icu::BreakIterator> iterator(
+            icu::BreakIterator::createSentenceInstance(
+                icu::Locale::getRoot(),
+                status
+            )
+        );
+
+        //controlliamo che l'iteratore sia stato creato correttamente
+        if (U_FAILURE(status) || !iterator) {
+            throw std::runtime_error(
+                "Unable to create ICU sentence break iterator"
+            );
+        }
+
+        //convertiamo il testo UTF-8 in una stringa Unicode di ICU
+        icu::UnicodeString unicode =
+            icu::UnicodeString::fromUTF8(
+                icu::StringPiece(
+                    input.data(),
+                    checked_length(input)
+                )
+            );
+
+        //assegniamo il testo all'iteratore
+        iterator->setText(unicode);
+
+        //vettore che conterrà le frasi individuate
+        std::vector<std::string> sentences;
+
+        //recuperiamo la posizione iniziale della prima frase
+        int32_t start = iterator->first();
+
+        //recuperiamo la posizione successiva
+        int32_t end = iterator->next();
+
+        //continuiamo fin quando ICU trova altri confini
+        while (end != icu::BreakIterator::DONE) {
+
+            //estraiamo la frase utilizzando gli indici UTF-16 di ICU
+            icu::UnicodeString sentence =
+                unicode.tempSubStringBetween(start, end);
+
+            //creiamo una stringa C++ per contenere la frase in UTF-8
+            std::string sentence_utf8;
+
+            //convertiamo la frase da UnicodeString a UTF-8
+            sentence.toUTF8String(sentence_utf8);
+
+            //salviamo la frase nel vettore
+            if (!sentence_utf8.empty()) {
+                sentences.push_back(sentence_utf8);
+            }
+
+            //il prossimo intervallo inizierà dal confine appena trovato
+            start = end;
+
+            //cerchiamo il confine successivo
+            end = iterator->next();
+        }
+
+        //restituiamo il vettore delle frasi individuate
+        return sentences;
+    }
+
 
     std::vector<Span> find_word_spans(std::string_view normalized) {
         std::vector<Span> spans;
