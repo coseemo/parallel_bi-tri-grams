@@ -165,6 +165,43 @@ test_ngram_counter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ngram_counter.dir/build.make CMakeFiles/test_ngram_counter.dir/build
 .PHONY : test_ngram_counter/fast
 
+#=============================================================================
+# Target rules for targets named test_document_reader
+
+# Build rule for target.
+test_document_reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_document_reader
+.PHONY : test_document_reader
+
+# fast build rule for target.
+test_document_reader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/build
+.PHONY : test_document_reader/fast
+
+src/document_reader.o: src/document_reader.cpp.o
+.PHONY : src/document_reader.o
+
+# target to build an object file
+src/document_reader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/document_reader.cpp.o
+.PHONY : src/document_reader.cpp.o
+
+src/document_reader.i: src/document_reader.cpp.i
+.PHONY : src/document_reader.i
+
+# target to preprocess a source file
+src/document_reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/document_reader.cpp.i
+.PHONY : src/document_reader.cpp.i
+
+src/document_reader.s: src/document_reader.cpp.s
+.PHONY : src/document_reader.s
+
+# target to generate assembly for a file
+src/document_reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/document_reader.cpp.s
+.PHONY : src/document_reader.cpp.s
+
 src/ngram_counter.o: src/ngram_counter.cpp.o
 .PHONY : src/ngram_counter.o
 
@@ -212,6 +249,30 @@ src/tokenizer.s: src/tokenizer.cpp.s
 src/tokenizer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/tokenizer.cpp.s
 .PHONY : src/tokenizer.cpp.s
+
+tests/test_document_reader.o: tests/test_document_reader.cpp.o
+.PHONY : tests/test_document_reader.o
+
+# target to build an object file
+tests/test_document_reader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/tests/test_document_reader.cpp.o
+.PHONY : tests/test_document_reader.cpp.o
+
+tests/test_document_reader.i: tests/test_document_reader.cpp.i
+.PHONY : tests/test_document_reader.i
+
+# target to preprocess a source file
+tests/test_document_reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/tests/test_document_reader.cpp.i
+.PHONY : tests/test_document_reader.cpp.i
+
+tests/test_document_reader.s: tests/test_document_reader.cpp.s
+.PHONY : tests/test_document_reader.s
+
+# target to generate assembly for a file
+tests/test_document_reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/tests/test_document_reader.cpp.s
+.PHONY : tests/test_document_reader.cpp.s
 
 tests/test_ngram_counter.o: tests/test_ngram_counter.cpp.o
 .PHONY : tests/test_ngram_counter.o
@@ -270,15 +331,22 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test_document_reader"
 	@echo "... test_ngram_counter"
 	@echo "... test_tokenizer"
 	@echo "... text_processing"
+	@echo "... src/document_reader.o"
+	@echo "... src/document_reader.i"
+	@echo "... src/document_reader.s"
 	@echo "... src/ngram_counter.o"
 	@echo "... src/ngram_counter.i"
 	@echo "... src/ngram_counter.s"
 	@echo "... src/tokenizer.o"
 	@echo "... src/tokenizer.i"
 	@echo "... src/tokenizer.s"
+	@echo "... tests/test_document_reader.o"
+	@echo "... tests/test_document_reader.i"
+	@echo "... tests/test_document_reader.s"
 	@echo "... tests/test_ngram_counter.o"
 	@echo "... tests/test_ngram_counter.i"
 	@echo "... tests/test_ngram_counter.s"

@@ -38,6 +38,7 @@ find_package(ICU REQUIRED COMPONENTS uc i18n)
 add_library(text_processing
     src/tokenizer.cpp
     src/ngram_counter.cpp
+    src/document_reader.cpp
 )
 
 #questo ci dice al progetto
@@ -99,4 +100,20 @@ target_link_libraries(test_ngram_counter
 add_test(
     NAME ngram_counter_tests
     COMMAND test_ngram_counter
+)
+
+#creiamo l'eseguibile per testare il lettore dei documenti
+add_executable(test_document_reader
+    tests/test_document_reader.cpp
+)
+
+#colleghiamo il test alla libreria del progetto
+target_link_libraries(test_document_reader
+    PRIVATE text_processing
+)
+
+#registriamo il test nel sistema CTest
+add_test(
+    NAME document_reader_tests
+    COMMAND test_document_reader
 )

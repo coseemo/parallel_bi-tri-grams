@@ -1,10 +1,10 @@
-Start testing: Nov 20 18:24 CET
+Start testing: Nov 23 19:36 CET
 ----------------------------------------------------------
-1/2 Testing: tokenizer_tests
-1/2 Test: tokenizer_tests
+1/3 Testing: tokenizer_tests
+1/3 Test: tokenizer_tests
 Command: "/home/cosimo/progetti/parallel/build/test_tokenizer"
 Directory: /home/cosimo/progetti/parallel/build
-"tokenizer_tests" start time: Nov 20 18:24 CET
+"tokenizer_tests" start time: Nov 23 19:36 CET
 Output:
 ----------------------------------------------------------
 Tutti i test del tokenizer sono superati.
@@ -12,15 +12,15 @@ Tutti i test del tokenizer sono superati.
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"tokenizer_tests" end time: Nov 20 18:24 CET
+"tokenizer_tests" end time: Nov 23 19:36 CET
 "tokenizer_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/2 Testing: ngram_counter_tests
-2/2 Test: ngram_counter_tests
+2/3 Testing: ngram_counter_tests
+2/3 Test: ngram_counter_tests
 Command: "/home/cosimo/progetti/parallel/build/test_ngram_counter"
 Directory: /home/cosimo/progetti/parallel/build
-"ngram_counter_tests" start time: Nov 20 18:24 CET
+"ngram_counter_tests" start time: Nov 23 19:36 CET
 Output:
 ----------------------------------------------------------
 tutti i test del contatore sono stati superati
@@ -28,8 +28,24 @@ tutti i test del contatore sono stati superati
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ngram_counter_tests" end time: Nov 20 18:24 CET
+"ngram_counter_tests" end time: Nov 23 19:36 CET
 "ngram_counter_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 20 18:24 CET
+3/3 Testing: document_reader_tests
+3/3 Test: document_reader_tests
+Command: "/home/cosimo/progetti/parallel/build/test_document_reader"
+Directory: /home/cosimo/progetti/parallel/build
+"document_reader_tests" start time: Nov 23 19:36 CET
+Output:
+----------------------------------------------------------
+tutti i test del document reader sono stati superati
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"document_reader_tests" end time: Nov 23 19:36 CET
+"document_reader_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 23 19:36 CET

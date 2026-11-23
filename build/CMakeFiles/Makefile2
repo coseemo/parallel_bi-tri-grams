@@ -66,12 +66,14 @@ CMAKE_BINARY_DIR = /home/cosimo/progetti/parallel/build
 all: CMakeFiles/text_processing.dir/all
 all: CMakeFiles/test_tokenizer.dir/all
 all: CMakeFiles/test_ngram_counter.dir/all
+all: CMakeFiles/test_document_reader.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/text_processing.dir/codegen
 codegen: CMakeFiles/test_tokenizer.dir/codegen
 codegen: CMakeFiles/test_ngram_counter.dir/codegen
+codegen: CMakeFiles/test_document_reader.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -82,6 +84,7 @@ preinstall:
 clean: CMakeFiles/text_processing.dir/clean
 clean: CMakeFiles/test_tokenizer.dir/clean
 clean: CMakeFiles/test_ngram_counter.dir/clean
+clean: CMakeFiles/test_document_reader.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -91,12 +94,12 @@ clean: CMakeFiles/test_ngram_counter.dir/clean
 CMakeFiles/text_processing.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=5,6,7 "Built target text_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=7,8,9,10 "Built target text_processing"
 .PHONY : CMakeFiles/text_processing.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/text_processing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/text_processing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 0
 .PHONY : CMakeFiles/text_processing.dir/rule
@@ -108,7 +111,7 @@ text_processing: CMakeFiles/text_processing.dir/rule
 # codegen rule for target.
 CMakeFiles/text_processing.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=5,6,7 "Finished codegen for target text_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=7,8,9,10 "Finished codegen for target text_processing"
 .PHONY : CMakeFiles/text_processing.dir/codegen
 
 # clean rule for target.
@@ -123,12 +126,12 @@ CMakeFiles/text_processing.dir/clean:
 CMakeFiles/test_tokenizer.dir/all: CMakeFiles/text_processing.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tokenizer.dir/build.make CMakeFiles/test_tokenizer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tokenizer.dir/build.make CMakeFiles/test_tokenizer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=3,4 "Built target test_tokenizer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=5,6 "Built target test_tokenizer"
 .PHONY : CMakeFiles/test_tokenizer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_tokenizer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_tokenizer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_tokenizer.dir/rule
@@ -140,7 +143,7 @@ test_tokenizer: CMakeFiles/test_tokenizer.dir/rule
 # codegen rule for target.
 CMakeFiles/test_tokenizer.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tokenizer.dir/build.make CMakeFiles/test_tokenizer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=3,4 "Finished codegen for target test_tokenizer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=5,6 "Finished codegen for target test_tokenizer"
 .PHONY : CMakeFiles/test_tokenizer.dir/codegen
 
 # clean rule for target.
@@ -155,12 +158,12 @@ CMakeFiles/test_tokenizer.dir/clean:
 CMakeFiles/test_ngram_counter.dir/all: CMakeFiles/text_processing.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ngram_counter.dir/build.make CMakeFiles/test_ngram_counter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ngram_counter.dir/build.make CMakeFiles/test_ngram_counter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=1,2 "Built target test_ngram_counter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=3,4 "Built target test_ngram_counter"
 .PHONY : CMakeFiles/test_ngram_counter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_ngram_counter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_ngram_counter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_ngram_counter.dir/rule
@@ -172,13 +175,45 @@ test_ngram_counter: CMakeFiles/test_ngram_counter.dir/rule
 # codegen rule for target.
 CMakeFiles/test_ngram_counter.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ngram_counter.dir/build.make CMakeFiles/test_ngram_counter.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=1,2 "Finished codegen for target test_ngram_counter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=3,4 "Finished codegen for target test_ngram_counter"
 .PHONY : CMakeFiles/test_ngram_counter.dir/codegen
 
 # clean rule for target.
 CMakeFiles/test_ngram_counter.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ngram_counter.dir/build.make CMakeFiles/test_ngram_counter.dir/clean
 .PHONY : CMakeFiles/test_ngram_counter.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_document_reader.dir
+
+# All Build rule for target.
+CMakeFiles/test_document_reader.dir/all: CMakeFiles/text_processing.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=1,2 "Built target test_document_reader"
+.PHONY : CMakeFiles/test_document_reader.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_document_reader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_document_reader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cosimo/progetti/parallel/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_document_reader.dir/rule
+
+# Convenience name for target.
+test_document_reader: CMakeFiles/test_document_reader.dir/rule
+.PHONY : test_document_reader
+
+# codegen rule for target.
+CMakeFiles/test_document_reader.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=1,2 "Finished codegen for target test_document_reader"
+.PHONY : CMakeFiles/test_document_reader.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_document_reader.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/clean
+.PHONY : CMakeFiles/test_document_reader.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

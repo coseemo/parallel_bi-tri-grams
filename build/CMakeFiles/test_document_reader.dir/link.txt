@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_document_reader.dir/tests/test_document_reader.cpp.o -o test_document_reader  libtext_processing.a /usr/lib/libicuuc.so -ldl /usr/lib/libicui18n.so

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/text_processing.dir/src/document_reader.cpp.o"
+  "CMakeFiles/text_processing.dir/src/document_reader.cpp.o.d"
   "CMakeFiles/text_processing.dir/src/ngram_counter.cpp.o"
   "CMakeFiles/text_processing.dir/src/ngram_counter.cpp.o.d"
   "CMakeFiles/text_processing.dir/src/tokenizer.cpp.o"

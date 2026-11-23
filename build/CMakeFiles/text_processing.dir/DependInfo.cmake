@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/cosimo/progetti/parallel/src/document_reader.cpp" "CMakeFiles/text_processing.dir/src/document_reader.cpp.o" "gcc" "CMakeFiles/text_processing.dir/src/document_reader.cpp.o.d"
   "/home/cosimo/progetti/parallel/src/ngram_counter.cpp" "CMakeFiles/text_processing.dir/src/ngram_counter.cpp.o" "gcc" "CMakeFiles/text_processing.dir/src/ngram_counter.cpp.o.d"
   "/home/cosimo/progetti/parallel/src/tokenizer.cpp" "CMakeFiles/text_processing.dir/src/tokenizer.cpp.o" "gcc" "CMakeFiles/text_processing.dir/src/tokenizer.cpp.o.d"
   )
