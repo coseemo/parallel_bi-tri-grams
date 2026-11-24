@@ -54,4 +54,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_tokenizer.dir/DependInfo.cmake"
   "CMakeFiles/test_ngram_counter.dir/DependInfo.cmake"
   "CMakeFiles/test_document_reader.dir/DependInfo.cmake"
+  "CMakeFiles/test_sequential_processor.dir/DependInfo.cmake"
+  "CMakeFiles/ngram_sequential.dir/DependInfo.cmake"
   )

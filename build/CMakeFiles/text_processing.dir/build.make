@@ -114,11 +114,26 @@ CMakeFiles/text_processing.dir/src/document_reader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/text_processing.dir/src/document_reader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cosimo/progetti/parallel/src/document_reader.cpp -o CMakeFiles/text_processing.dir/src/document_reader.cpp.s
 
+CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o: CMakeFiles/text_processing.dir/flags.make
+CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o: /home/cosimo/progetti/parallel/src/sequential_processor.cpp
+CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o: CMakeFiles/text_processing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o -MF CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o.d -o CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o -c /home/cosimo/progetti/parallel/src/sequential_processor.cpp
+
+CMakeFiles/text_processing.dir/src/sequential_processor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/text_processing.dir/src/sequential_processor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cosimo/progetti/parallel/src/sequential_processor.cpp > CMakeFiles/text_processing.dir/src/sequential_processor.cpp.i
+
+CMakeFiles/text_processing.dir/src/sequential_processor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/text_processing.dir/src/sequential_processor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cosimo/progetti/parallel/src/sequential_processor.cpp -o CMakeFiles/text_processing.dir/src/sequential_processor.cpp.s
+
 # Object files for target text_processing
 text_processing_OBJECTS = \
 "CMakeFiles/text_processing.dir/src/tokenizer.cpp.o" \
 "CMakeFiles/text_processing.dir/src/ngram_counter.cpp.o" \
-"CMakeFiles/text_processing.dir/src/document_reader.cpp.o"
+"CMakeFiles/text_processing.dir/src/document_reader.cpp.o" \
+"CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o"
 
 # External object files for target text_processing
 text_processing_EXTERNAL_OBJECTS =
@@ -126,9 +141,10 @@ text_processing_EXTERNAL_OBJECTS =
 libtext_processing.a: CMakeFiles/text_processing.dir/src/tokenizer.cpp.o
 libtext_processing.a: CMakeFiles/text_processing.dir/src/ngram_counter.cpp.o
 libtext_processing.a: CMakeFiles/text_processing.dir/src/document_reader.cpp.o
+libtext_processing.a: CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o
 libtext_processing.a: CMakeFiles/text_processing.dir/build.make
 libtext_processing.a: CMakeFiles/text_processing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libtext_processing.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cosimo/progetti/parallel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libtext_processing.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/text_processing.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/text_processing.dir/link.txt --verbose=$(VERBOSE)
 

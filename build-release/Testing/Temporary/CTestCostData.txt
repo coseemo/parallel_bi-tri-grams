@@ -1,0 +1,5 @@
+tokenizer_tests 1 0.00349934
+ngram_counter_tests 1 0.00235024
+document_reader_tests 1 0.00222412
+sequential_processor_tests 1 0.00191986
+---

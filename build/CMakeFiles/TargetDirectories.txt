@@ -2,6 +2,8 @@
 /home/cosimo/progetti/parallel/build/CMakeFiles/test_tokenizer.dir
 /home/cosimo/progetti/parallel/build/CMakeFiles/test_ngram_counter.dir
 /home/cosimo/progetti/parallel/build/CMakeFiles/test_document_reader.dir
+/home/cosimo/progetti/parallel/build/CMakeFiles/test_sequential_processor.dir
+/home/cosimo/progetti/parallel/build/CMakeFiles/ngram_sequential.dir
 /home/cosimo/progetti/parallel/build/CMakeFiles/test.dir
 /home/cosimo/progetti/parallel/build/CMakeFiles/edit_cache.dir
 /home/cosimo/progetti/parallel/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/ngram_sequential.dir/src/main_sequential.cpp.o -o ngram_sequential  libtext_processing.a /usr/lib/libicuuc.so -ldl /usr/lib/libicui18n.so

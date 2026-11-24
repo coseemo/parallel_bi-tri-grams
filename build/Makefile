@@ -178,6 +178,32 @@ test_document_reader/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_document_reader.dir/build.make CMakeFiles/test_document_reader.dir/build
 .PHONY : test_document_reader/fast
 
+#=============================================================================
+# Target rules for targets named test_sequential_processor
+
+# Build rule for target.
+test_sequential_processor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_sequential_processor
+.PHONY : test_sequential_processor
+
+# fast build rule for target.
+test_sequential_processor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sequential_processor.dir/build.make CMakeFiles/test_sequential_processor.dir/build
+.PHONY : test_sequential_processor/fast
+
+#=============================================================================
+# Target rules for targets named ngram_sequential
+
+# Build rule for target.
+ngram_sequential: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ngram_sequential
+.PHONY : ngram_sequential
+
+# fast build rule for target.
+ngram_sequential/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ngram_sequential.dir/build.make CMakeFiles/ngram_sequential.dir/build
+.PHONY : ngram_sequential/fast
+
 src/document_reader.o: src/document_reader.cpp.o
 .PHONY : src/document_reader.o
 
@@ -202,6 +228,30 @@ src/document_reader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/document_reader.cpp.s
 .PHONY : src/document_reader.cpp.s
 
+src/main_sequential.o: src/main_sequential.cpp.o
+.PHONY : src/main_sequential.o
+
+# target to build an object file
+src/main_sequential.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ngram_sequential.dir/build.make CMakeFiles/ngram_sequential.dir/src/main_sequential.cpp.o
+.PHONY : src/main_sequential.cpp.o
+
+src/main_sequential.i: src/main_sequential.cpp.i
+.PHONY : src/main_sequential.i
+
+# target to preprocess a source file
+src/main_sequential.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ngram_sequential.dir/build.make CMakeFiles/ngram_sequential.dir/src/main_sequential.cpp.i
+.PHONY : src/main_sequential.cpp.i
+
+src/main_sequential.s: src/main_sequential.cpp.s
+.PHONY : src/main_sequential.s
+
+# target to generate assembly for a file
+src/main_sequential.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ngram_sequential.dir/build.make CMakeFiles/ngram_sequential.dir/src/main_sequential.cpp.s
+.PHONY : src/main_sequential.cpp.s
+
 src/ngram_counter.o: src/ngram_counter.cpp.o
 .PHONY : src/ngram_counter.o
 
@@ -225,6 +275,30 @@ src/ngram_counter.s: src/ngram_counter.cpp.s
 src/ngram_counter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/ngram_counter.cpp.s
 .PHONY : src/ngram_counter.cpp.s
+
+src/sequential_processor.o: src/sequential_processor.cpp.o
+.PHONY : src/sequential_processor.o
+
+# target to build an object file
+src/sequential_processor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/sequential_processor.cpp.o
+.PHONY : src/sequential_processor.cpp.o
+
+src/sequential_processor.i: src/sequential_processor.cpp.i
+.PHONY : src/sequential_processor.i
+
+# target to preprocess a source file
+src/sequential_processor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/sequential_processor.cpp.i
+.PHONY : src/sequential_processor.cpp.i
+
+src/sequential_processor.s: src/sequential_processor.cpp.s
+.PHONY : src/sequential_processor.s
+
+# target to generate assembly for a file
+src/sequential_processor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/text_processing.dir/build.make CMakeFiles/text_processing.dir/src/sequential_processor.cpp.s
+.PHONY : src/sequential_processor.cpp.s
 
 src/tokenizer.o: src/tokenizer.cpp.o
 .PHONY : src/tokenizer.o
@@ -298,6 +372,30 @@ tests/test_ngram_counter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ngram_counter.dir/build.make CMakeFiles/test_ngram_counter.dir/tests/test_ngram_counter.cpp.s
 .PHONY : tests/test_ngram_counter.cpp.s
 
+tests/test_sequential_processor.o: tests/test_sequential_processor.cpp.o
+.PHONY : tests/test_sequential_processor.o
+
+# target to build an object file
+tests/test_sequential_processor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sequential_processor.dir/build.make CMakeFiles/test_sequential_processor.dir/tests/test_sequential_processor.cpp.o
+.PHONY : tests/test_sequential_processor.cpp.o
+
+tests/test_sequential_processor.i: tests/test_sequential_processor.cpp.i
+.PHONY : tests/test_sequential_processor.i
+
+# target to preprocess a source file
+tests/test_sequential_processor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sequential_processor.dir/build.make CMakeFiles/test_sequential_processor.dir/tests/test_sequential_processor.cpp.i
+.PHONY : tests/test_sequential_processor.cpp.i
+
+tests/test_sequential_processor.s: tests/test_sequential_processor.cpp.s
+.PHONY : tests/test_sequential_processor.s
+
+# target to generate assembly for a file
+tests/test_sequential_processor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sequential_processor.dir/build.make CMakeFiles/test_sequential_processor.dir/tests/test_sequential_processor.cpp.s
+.PHONY : tests/test_sequential_processor.cpp.s
+
 tests/test_tokenizer.o: tests/test_tokenizer.cpp.o
 .PHONY : tests/test_tokenizer.o
 
@@ -331,16 +429,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... ngram_sequential"
 	@echo "... test_document_reader"
 	@echo "... test_ngram_counter"
+	@echo "... test_sequential_processor"
 	@echo "... test_tokenizer"
 	@echo "... text_processing"
 	@echo "... src/document_reader.o"
 	@echo "... src/document_reader.i"
 	@echo "... src/document_reader.s"
+	@echo "... src/main_sequential.o"
+	@echo "... src/main_sequential.i"
+	@echo "... src/main_sequential.s"
 	@echo "... src/ngram_counter.o"
 	@echo "... src/ngram_counter.i"
 	@echo "... src/ngram_counter.s"
+	@echo "... src/sequential_processor.o"
+	@echo "... src/sequential_processor.i"
+	@echo "... src/sequential_processor.s"
 	@echo "... src/tokenizer.o"
 	@echo "... src/tokenizer.i"
 	@echo "... src/tokenizer.s"
@@ -350,6 +456,9 @@ help:
 	@echo "... tests/test_ngram_counter.o"
 	@echo "... tests/test_ngram_counter.i"
 	@echo "... tests/test_ngram_counter.s"
+	@echo "... tests/test_sequential_processor.o"
+	@echo "... tests/test_sequential_processor.i"
+	@echo "... tests/test_sequential_processor.s"
 	@echo "... tests/test_tokenizer.o"
 	@echo "... tests/test_tokenizer.i"
 	@echo "... tests/test_tokenizer.s"

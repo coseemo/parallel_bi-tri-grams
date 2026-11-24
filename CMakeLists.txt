@@ -39,6 +39,7 @@ add_library(text_processing
     src/tokenizer.cpp
     src/ngram_counter.cpp
     src/document_reader.cpp
+    src/sequential_processor.cpp
 )
 
 #questo ci dice al progetto
@@ -117,3 +118,21 @@ add_test(
     NAME document_reader_tests
     COMMAND test_document_reader
 )
+
+add_executable(test_sequential_processor
+    tests/test_sequential_processor.cpp
+)
+
+target_link_libraries(test_sequential_processor PRIVATE text_processing)
+
+add_test(
+    NAME sequential_processor_tests
+    COMMAND test_sequential_processor
+)
+
+#programma principale per l'elaborazione sequenziale
+add_executable(ngram_sequential
+    src/main_sequential.cpp
+)
+
+target_link_libraries(ngram_sequential PRIVATE text_processing)

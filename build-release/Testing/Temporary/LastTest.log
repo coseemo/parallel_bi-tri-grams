@@ -1,0 +1,67 @@
+Start testing: Nov 24 18:28 CET
+----------------------------------------------------------
+1/4 Testing: tokenizer_tests
+1/4 Test: tokenizer_tests
+Command: "/home/cosimo/progetti/parallel/build-release/test_tokenizer"
+Directory: /home/cosimo/progetti/parallel/build-release
+"tokenizer_tests" start time: Nov 24 18:28 CET
+Output:
+----------------------------------------------------------
+Tutti i test del tokenizer sono superati.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"tokenizer_tests" end time: Nov 24 18:28 CET
+"tokenizer_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: ngram_counter_tests
+2/4 Test: ngram_counter_tests
+Command: "/home/cosimo/progetti/parallel/build-release/test_ngram_counter"
+Directory: /home/cosimo/progetti/parallel/build-release
+"ngram_counter_tests" start time: Nov 24 18:28 CET
+Output:
+----------------------------------------------------------
+tutti i test del contatore sono stati superati
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ngram_counter_tests" end time: Nov 24 18:28 CET
+"ngram_counter_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: document_reader_tests
+3/4 Test: document_reader_tests
+Command: "/home/cosimo/progetti/parallel/build-release/test_document_reader"
+Directory: /home/cosimo/progetti/parallel/build-release
+"document_reader_tests" start time: Nov 24 18:28 CET
+Output:
+----------------------------------------------------------
+tutti i test del document reader sono stati superati
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"document_reader_tests" end time: Nov 24 18:28 CET
+"document_reader_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: sequential_processor_tests
+4/4 Test: sequential_processor_tests
+Command: "/home/cosimo/progetti/parallel/build-release/test_sequential_processor"
+Directory: /home/cosimo/progetti/parallel/build-release
+"sequential_processor_tests" start time: Nov 24 18:28 CET
+Output:
+----------------------------------------------------------
+Test del processore sequenziale superato.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"sequential_processor_tests" end time: Nov 24 18:28 CET
+"sequential_processor_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 24 18:28 CET
